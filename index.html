@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Pandavas</title>
+<style>
+:root{--bg:#eef1f5;--card:#fff;--text:#1b2330;--main:#1d2b53;--nav:#1d2b53;--line:#c9d1dc;--gold:#f2b705}
+body.dark{--bg:#11151c;--card:#1a212c;--text:#e8ecf2;--main:#9db7ff;--nav:#0b1020;--line:#33405a}
+*{box-sizing:border-box;margin:0}
+body{font-family:"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+h1,h2,h3{font-family:Palatino,"Palatino Linotype",Georgia,serif;color:var(--main)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+nav{background:var(--nav);display:flex;flex-wrap:wrap;align-items:center;gap:6px;padding:10px 20px;position:sticky;top:0}
+nav b{font-family:Palatino,Georgia,serif;color:var(--gold);margin-right:auto;font-size:1.25rem}
+nav a{color:#fff;text-decoration:none;padding:6px 12px;border-radius:4px}
+nav a:hover,nav a.on{background:var(--gold);color:#1b2330}
+nav button{background:none;border:1px solid #fff;color:#fff;border-radius:4px;padding:4px 9px;cursor:pointer}
+.hero{background:var(--nav);text-align:center;padding:80px 20px 70px;border-bottom:8px solid;border-image:linear-gradient(90deg,#2f6f4f 20%,#b3361f 20% 40%,#1f4fa3 40% 60%,#7a3b8f 60% 80%,#c98a00 80%) 1}
+.hero h1{color:#fff;font-size:3rem}
+.hero p{color:#d5dcf0;max-width:520px;margin:10px auto 0}
+.btn{display:inline-block;margin-top:18px;padding:10px 22px;background:var(--gold);color:#1b2330;border:0;border-radius:4px;text-decoration:none;cursor:pointer;font:inherit;font-weight:600}
+.wrap{max-width:860px;margin:auto;padding:30px 20px 50px}
+h2{margin:28px 0 10px}
+p{max-width:68ch;margin-bottom:10px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{display:block;background:var(--card);border:1px solid var(--line);border-top:6px solid var(--c,#888);border-radius:6px;padding:16px;color:inherit;text-decoration:none}
+a.card:hover{border-color:var(--c)}
+.y{--c:#2f6f4f}.b{--c:#b3361f}.a{--c:#1f4fa3}.n{--c:#7a3b8f}.s{--c:#c98a00}
+.timeline{border-left:3px solid var(--gold);padding-left:20px}
+.timeline div{margin-bottom:18px}
+table{width:100%;border-collapse:collapse;background:var(--card)}
+th,td{padding:9px;border:1px solid var(--line);text-align:left}
+th{background:var(--nav);color:#fff}
+input,textarea{width:100%;padding:9px;margin:4px 0 14px;border:1px solid var(--line);border-radius:4px;font:inherit;background:var(--card);color:var(--text)}
+.opt{display:block;margin:4px 0}
+.opt input{width:auto;margin:0 8px 0 0}
+#quiz .card{margin-bottom:14px}
+#msg,#result,#fact{font-weight:600;margin-top:12px}
+footer{background:var(--nav);color:#d5dcf0;text-align:center;padding:14px}
+.page{display:none}
+.page.active{display:block}
+</style>
+</head>
+<body>
+<nav><b>Pandavas</b><a href="#home">Home</a><a href="#pandavas">The Five</a><a href="#story">Story</a><a href="#quiz">Quiz</a><a href="#contact">Contact</a><button id="mode" aria-label="Toggle dark mode">&#127769;</button></nav>
+<section class="page" id="p-home">
+<header class="hero"><h1>The Pandavas</h1><p>Five brothers, one shared wife, a kingdom to win back, and the war that decided it.</p><a class="btn" href="#pandavas">Meet the five brothers</a></header>
+<div class="wrap">
+<h2>Who were the Pandavas?</h2>
+<p>The Pandavas were the five sons of King Pandu of Hastinapur and the heroes of the Indian epic, the Mahabharata. Their cousins, the hundred Kauravas, claimed the same throne, and the rivalry ended in the great Kurukshetra war.</p>
+<h2>Explore the site</h2>
+<div class="grid">
+<a class="card y" href="#pandavas"><h3>The Five Brothers</h3><p>Their parents, strengths and famous skills.</p></a>
+<a class="card a" href="#story"><h3>The Story</h3><p>From childhood to the final journey.</p></a>
+<a class="card b" href="#quiz"><h3>Take the Quiz</h3><p>Five questions to test what you learned.</p></a>
+</div>
+<h2>Did you know?</h2>
+<button class="btn" id="factBtn">Show a random fact</button>
+<p id="fact"></p>
+</div>
+</section>
+<section class="page" id="p-pandavas">
+<div class="wrap">
+<h1>The Five Brothers</h1>
+<p>Their mothers were Kunti and Madri, the queens of Pandu. Each brother was born through the blessing of a god.</p>
+<div class="grid">
+<div class="card y"><h3>Yudhishthira</h3><p>The eldest, known for truth and justice. He became king of Indraprastha and later of Hastinapur.</p></div>
+<div class="card b"><h3>Bhima</h3><p>The strongest of the five. He fought with a mace and defeated Duryodhana.</p></div>
+<div class="card a"><h3>Arjuna</h3><p>The greatest archer of his time. Krishna taught him the Bhagavad Gita on the battlefield.</p></div>
+<div class="card n"><h3>Nakula</h3><p>Handsome and skilled with horses and the sword.</p></div>
+<div class="card s"><h3>Sahadeva</h3><p>Nakula&rsquo;s twin, wise and learned in astrology.</p></div>
+</div>
+<h2>Quick facts</h2>
+<table>
+<tr><th>Brother</th><th>Divine father</th><th>Known for</th></tr>
+<tr><td>Yudhishthira</td><td>Dharma (justice)</td><td>Truthfulness</td></tr>
+<tr><td>Bhima</td><td>Vayu (wind)</td><td>Strength, mace</td></tr>
+<tr><td>Arjuna</td><td>Indra (king of gods)</td><td>Archery, Gandiva bow</td></tr>
+<tr><td>Nakula</td><td>Ashwini Kumaras</td><td>Horses, swordsmanship</td></tr>
+<tr><td>Sahadeva</td><td>Ashwini Kumaras</td><td>Wisdom, astrology</td></tr>
+</table>
+</div>
+</section>
+<section class="page" id="p-story">
+<div class="wrap">
+<h1>The Story of the Pandavas</h1>
+<p>The main events of their life, in order.</p>
+<div class="timeline">
+<div><h3>Childhood in Hastinapur</h3><p>After Pandu died, Kunti brought the five boys to Hastinapur. They grew up with the Kauravas and trained under Drona.</p></div>
+<div><h3>The house of lac</h3><p>Duryodhana plotted to burn the Pandavas inside a palace made of lac. They escaped through a secret tunnel.</p></div>
+<div><h3>Draupadi&rsquo;s swayamvara</h3><p>Arjuna won the archery contest and Draupadi became the wife of all five brothers.</p></div>
+<div><h3>Indraprastha</h3><p>The Pandavas turned barren land into the splendid city of Indraprastha. Yudhishthira was crowned king.</p></div>
+<div><h3>The game of dice</h3><p>In a rigged dice game against Shakuni, Yudhishthira lost his kingdom, his brothers and Draupadi. The Pandavas were sent into exile.</p></div>
+<div><h3>Exile</h3><p>They lived 12 years in the forest and 1 year in disguise at the court of King Virata.</p></div>
+<div><h3>The Kurukshetra war</h3><p>Duryodhana refused to return their kingdom, so war began. It lasted 18 days, with Krishna as Arjuna&rsquo;s charioteer, and the Pandavas won.</p></div>
+<div><h3>The final journey</h3><p>After ruling for many years, the Pandavas set out for the Himalayas on their last journey.</p></div>
+</div>
+</div>
+</section>
+<section class="page" id="p-quiz">
+<div class="wrap">
+<h1>Pandavas Quiz</h1>
+<p>Pick one answer for each question.</p>
+<div id="quiz"></div>
+<button class="btn" id="submit">Check my score</button>
+<p id="result"></p>
+</div>
+</section>
+<section class="page" id="p-contact">
+<div class="wrap">
+<h1>Contact</h1>
+<p>Send a question or a comment about this project.</p>
+<form id="form">
+<label for="n">Name</label><input id="n" type="text">
+<label for="e">Email</label><input id="e" type="text">
+<label for="t">Message</label><textarea id="t" rows="5"></textarea>
+<button class="btn" type="submit">Send message</button>
+</form>
+<p id="msg"></p>
+</div>
+</section>
+<footer>Student project: HTML, CSS and JavaScript</footer>
+<script>
+// 0. Page switching: one file, many "pages" (uses the # part of the address)
+const pages = document.querySelectorAll('.page');
+function showPage() {
+  let name = location.hash.slice(1) || 'home';
+  if (!document.getElementById('p-' + name)) name = 'home';
+  pages.forEach(p => p.classList.toggle('active', p.id === 'p-' + name));
+  document.querySelectorAll('nav a').forEach(a => a.classList.toggle('on', a.getAttribute('href') === '#' + name));
+  window.scrollTo(0, 0);
+}
+window.addEventListener('hashchange', showPage);
+showPage();
+
+// 1. Dark mode (remembered using localStorage)
+const mode = document.getElementById('mode');
+if (localStorage.getItem('dark') === '1') document.body.classList.add('dark');
+mode.onclick = () => {
+  document.body.classList.toggle('dark');
+  localStorage.setItem('dark', document.body.classList.contains('dark') ? '1' : '0');
+};
+
+// 2. Random fact (home page)
+const factBtn = document.getElementById('factBtn');
+if (factBtn) {
+  const facts = [
+    'Arjuna\'s famous bow was called Gandiva.',
+    'Bhima was known for huge strength and an equally huge appetite.',
+    'Yudhishthira was known for always speaking the truth.',
+    'The Pandavas spent 12 years in the forest and 1 year in disguise.',
+    'The Kurukshetra war lasted 18 days.',
+    'Sahadeva was said to have deep knowledge of astrology.'
+  ];
+  factBtn.onclick = () => {
+    document.getElementById('fact').textContent = facts[Math.floor(Math.random() * facts.length)];
+  };
+}
+
+// 3. Quiz (quiz page)
+const quiz = document.getElementById('quiz');
+if (quiz) {
+  const questions = [
+    { q: 'Who was the eldest Pandava?', o: ['Bhima', 'Yudhishthira', 'Arjuna'], a: 1 },
+    { q: 'Which Pandava fought with a mace (gada)?', o: ['Bhima', 'Nakula', 'Arjuna'], a: 0 },
+    { q: 'Who were the twin Pandavas?', o: ['Arjuna and Bhima', 'Yudhishthira and Bhima', 'Nakula and Sahadeva'], a: 2 },
+    { q: 'Who was Arjuna\'s charioteer in the war?', o: ['Krishna', 'Drona', 'Karna'], a: 0 },
+    { q: 'How many days did the Kurukshetra war last?', o: ['10', '18', '30'], a: 1 }
+  ];
+  quiz.innerHTML = questions.map((x, i) =>
+    `<div class="card"><p><b>${i + 1}. ${x.q}</b></p>` +
+    x.o.map((o, j) => `<label class="opt"><input type="radio" name="q${i}" value="${j}">${o}</label>`).join('') +
+    '</div>').join('');
+  document.getElementById('submit').onclick = () => {
+    let score = 0;
+    questions.forEach((x, i) => {
+      const picked = document.querySelector(`input[name="q${i}"]:checked`);
+      if (picked && Number(picked.value) === x.a) score++;
+    });
+    document.getElementById('result').textContent = `You scored ${score} out of ${questions.length}.`;
+  };
+}
+
+// 4. Contact form validation (contact page)
+const form = document.getElementById('form');
+if (form) {
+  form.onsubmit = e => {
+    e.preventDefault();
+    const name = document.getElementById('n').value.trim();
+    const email = document.getElementById('e').value.trim();
+    const text = document.getElementById('t').value.trim();
+    const out = document.getElementById('msg');
+    if (name.length < 2) out.textContent = 'Please enter your name.';
+    else if (!email.includes('@') || !email.includes('.')) out.textContent = 'Please enter a valid email address.';
+    else if (text.length < 10) out.textContent = 'Your message must be at least 10 characters.';
+    else { out.textContent = `Thank you, ${name}! Your message was received.`; form.reset(); }
+  };
+}
+</script>
+</body>
+</html>
